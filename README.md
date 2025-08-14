@@ -1,12 +1,66 @@
-# React + Vite
+# Running Train Animation – React + Framer Motion
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project animates an ASCII art train moving across the screen with animated wheels and a smoke effect using Hindi text ("हर हर महादेव"). Built with React and [framer-motion](https://www.framer.com/motion/) for smooth, continuous animation.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Concepts Demonstrated
 
-## Expanding the ESLint configuration
+### 1. **React Functional Components & Hooks**
+- Uses `useState` for animation frames (smoke and wheels).
+- Uses `useEffect` to set up a timer for frame updates.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 2. **ASCII Art Animation**
+- The train and wheels are rendered as ASCII art.
+- Wheels animate by cycling through characters (`|`, `/`, `-`, `\`).
+- Smoke is animated by cycling through an array of Hindi text strings.
+
+### 3. **Framer Motion for Animation**
+- The train is wrapped in a `<motion.pre>` element.
+- The train moves smoothly from right to left using framer-motion’s `animate` and `transition` props.
+
+### 4. **Styling**
+- Uses inline styles for background, font, color, and positioning.
+- The animation is full-screen and centered vertically.
+
+---
+
+## Getting Started
+
+1. **Install dependencies:**
+   ```sh
+   npm install
+   ```
+
+2. **Run the development server:**
+   ```sh
+   npm run dev
+   ```
+
+3. **Build for production:**
+   ```sh
+   npm run build
+   ```
+
+---
+
+## File Structure
+
+```
+src/
+  component/
+    Train.jsx      # Main train animation component
+  App.jsx          # Main app entry
+  main.jsx         # React entry point
+public/
+  index.html       # HTML template
+```
+
+---
+
+## Dependencies
+
+- React
+- framer-motion
+
+---
