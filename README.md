@@ -4,6 +4,7 @@ This project animates an ASCII art train moving across the screen with animated 
 
 ---
 
+
 ## Concepts Demonstrated
 
 ### 1. **React Functional Components & Hooks**
